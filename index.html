@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vitamin Learning App 2.0</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <h1 id="appTitle">Vitamin Learning App</h1>
+
+    <select id="languageSelect" onchange="changeLanguage()">
+      <option value="en">English</option>
+      <option value="bn">Bangla</option>
+      <option value="hi">Hindi</option>
+      <option value="ru">Russian</option>
+    </select>
+
+    <button onclick="toggleDarkMode()" class="dark-btn">ðŸŒ™</button>
+  </div>
+
+  <!-- Filter Buttons -->
+  <div class="filter-buttons">
+    <button onclick="filterCategory('All')">All</button>
+    <button onclick="filterCategory('Fruit')">Fruit</button>
+    <button onclick="filterCategory('Vegetable')">Vegetable</button>
+    <button onclick="filterCategory('Nuts & Seeds')">Nuts & Seeds</button>
+    <button onclick="filterCategory('Meats & Protein')">Meats & Protein</button>
+    <button onclick="filterCategory('Herbs & Spices')">Herbs & Spices</button>
+    <button onclick="filterCategory('Grains & Legumes')">Grains & Legumes</button>
+  </div>
+
+  <!-- Search -->
+  <input type="text" id="search" placeholder="Search food..." onkeyup="searchItem()">
+
+  <!-- Items Container -->
+  <div id="container"></div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span onclick="closeModal()" class="close">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
